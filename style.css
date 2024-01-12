@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.container {
+    background: linear-gradient(#ddd 50%, #227ABB 50.1%);
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container .box-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.container .box-container .box {
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.container .box-container .box:nth-child(2) {
+    border: 2px solid #000;
+}
+
+.container .box-container .box:nth-child(2) .btn {
+    background: #227ABB;
+}
+
+.container .box-container .box:nth-child(2) .btn:hover {
+    background: #444;
+}
+
+.container .box-container .box h3 {
+    font-size: 25px;
+    padding: 15px 0;
+    color: #444;
+}
+
+.container .box-container .box .price {
+    color: #fff;
+    background: #227ABB;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.container .box-container .box .price.year {
+    display: none;
+}
+
+.container .box-container .box .list {
+    margin: 20px 0;
+}
+
+.container .box-container .box .list p {
+    padding: 15px 0;
+    font-size: 17px;
+    color: #666;
+}
+
+.container .box-container .box .list p i {
+    padding-right: 5px;
+    color: #212121;
+}
+
+.container .box-container .box .btn {
+    margin: 20px;
+    color: #fff;
+    background: #444;
+    font-size: 17px;
+    padding: 20px;
+    display: block;
+}
+
+.container .box-container .box .btn:hover {
+    background: #227ABB;
+}
+
+.container .price-toggler {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.container .price-toggler span {
+    padding: 7px 30px;
+    cursor: pointer;
+    color: #444;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.container .price-toggler span.active {
+    background: #227ABB;
+    color: #fff;
+}
+
+@media (max-width:450px) {
+    .container .box-container {
+        grid-template-columns: 1fr;
+    }
+}
